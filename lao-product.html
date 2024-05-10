@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRODUCT </title>
+<style>
+  body {
+    background-color: #2b2e38;
+    background-repeat: repeat;
+    background-size: 100px;
+  }
+
+  .patutuya {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .patutuya p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff;
+  }
+
+  .patutuya button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+
+  .patutuya button:hover {
+    background-color: #eeeeee;
+  }
+
+  .box {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #2b2e38;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  .box p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff;
+  }
+
+  .slider-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+  }
+
+  .slider img {
+    width: 100%;
+    display: none;
+  }
+
+  .slider img:first-child {
+    display: block;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .center {
+    text-align: center;
+  }
+</style>
+</head>
+
+<body>
+
+<center><font color="#ffffff">
+  <h2> PRODUCT</h2>
+</font></center>
+
+<div class="slider-container">
+  <div class="slider">
+    <img src="https://media-afr-cdn.oriflame.com/contentImage?externalMediaId=201bc7b3-c2f8-4578-af70-2dfe9523f20f&name=perfumes-1&inputFormat=png" alt="perfume 1">
+    <div class="box" id="box1">
+      <p>"Aurora Mist" is a seductive potion that promises irresistible allure and passion, enticing those who dare to indulge in its enchanting depths.</p>
+      <p>250 pesos nalangggg!!!</p>
+      <center><button class="patutuya-button" onclick="alert('hesuyam ⭐⭐⭐⭐⭐')">
+        <font color="black">PATUTUYA</font>
+      </button></center>
+    </div>
+
+    <img src="https://www.lucian.store/cdn/shop/articles/IMG_1224.JPG?v=1568721007" alt="perfume 2">
+    <div class="box" id="box2">
+      <p>"Oceanic Whisper" captures the essence of a tranquil seaside retreat, evoking the gentle caress of ocean breezes and the soothing whispers of the sea.</p>
+      <p>250 pesos nalangggg!!!</p>
+      <center><button class="patutuya-button" onclick="alert('hesuyam ⭐⭐⭐⭐⭐')">
+        <font color="black">PATUTUYA</font>
+      </button></center>
+    </div>
+
+    <img src="https://media.theperfumeshop.com/medias/sys_master/prd-images/h95/hbd/8826257080350/zoom-front-1266314_420x420/dior-miss-dior-eau-de-parfum-spray-420x420" alt="perfume 3">
+    <div class="box" id="box3">
+      <p>The "Eternal Elegance" is a mysterious elixir rumored to possess the power to ignite intense love while also carrying the risk of tragic consequences.</p>
+      <p>250 pesos nalangggg!!!</p>
+      <center><button class="patutuya-button" onclick="alert('hesuyam ⭐⭐⭐⭐⭐')">
+        <font color="black">PATUTUYA</font>
+      </button></center>
+    </div>
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slider")[0].getElementsByTagName("img");
+    var boxes = document.getElementsByClassName("box");
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+      slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      boxes[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+    boxes[slideIndex - 1].style.display = "block";
+  }
+</script>
+
+</body>
+</html>

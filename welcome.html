@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Be My Girlfriend?</title>
+    <style>
+        body{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	line-height: 1.7;
+	color: #ffeba7;
+	background-color: #1f2029;
+	
+	.box {
+	    position: relative;
+            width: 5px;
+            height: 2px;
+            border: 1px solid #000;
+            background-color: #152111;
+	}
+        .container {
+            position: relative;
+            width: 300px;
+            height: 150px;
+            border: 1px solid #000;
+            background-color: #2b2e38;
+        }
+        .button {
+            position: absolute;
+            top: 50%;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        #btnYes {
+            left: 30%;
+            background-color: green;
+            color: white;
+        }
+        #btnNo {
+            left: 60%;
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>What happened? </h1>
+        <h2>tangaa sad nimo oi</h2>
+        <h2>pag buhat nalang ug laing account oi </h2>
+       <h2>press yes para makabuhat naka, bawal mag no</h> 
+       <div class="container">
+            <button id="btnYes" class="button">Yes</button>
+            <button id="btnNo" class="button">No</button>
+        </div>
+    </center>
+
+    <script>
+        var buttonYes = document.getElementById("btnYes");
+        var buttonNo = document.getElementById("btnNo");
+
+        function getRandomPosition() {
+            var container = document.querySelector(".container");
+            var x = Math.random() * (container.offsetWidth - buttonNo.offsetWidth);
+            var y = Math.random() * (container.offsetHeight - buttonNo.offsetHeight);
+            return [x, y];
+        }
+
+        function blinkToRandomPosition() {
+            var position = getRandomPosition();
+            buttonNo.style.left = position[0] + "px";
+            buttonNo.style.top = position[1] + "px";
+        }
+
+        function congratulate() {
+            alert("Congratulations, pagbuhat na didto.");
+        }
+
+        buttonYes.addEventListener("click", congratulate);
+        buttonNo.addEventListener("click", blinkToRandomPosition);
+    </script>
+    <div class="#btnYes">
+        
+   <center> <button id="#btnYes"><a rel="Stylesheet" href="file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit%20user%20files/lao/archangelscent.html">
+       <h5>Return</h5>
+       </button>
+       </a>
+       </center>
+       </div> 
+   
+</body>
+</html>
